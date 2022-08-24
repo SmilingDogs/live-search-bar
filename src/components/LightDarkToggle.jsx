@@ -2,34 +2,34 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Crater = styled.div`
-    background-color: lightgrey;
-    border-radius: 50%;
-    position: absolute;
-    opacity: 0;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4) inset;
-    transition: all 0.3s ease;
+  background-color: lightgrey;
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4) inset;
+  transition: all 0.3s ease;
 
-    &:first-child {
-        left: 5px;
-        top: 15px;
-        height: 15px;
-        width: 40px;
-        transform: rotate(-45deg);
-    }
-    &:nth-child(2) {
-        right: 10px;
-        top: 15px;
-        height: 15px;
-        width: 25px;
-        transform: rotate(45deg);
-    }
-    &:last-child {
-        left: 40px;
-        bottom: 10px;
-        height:20px;
-        width: 25px;
-        transform: rotate(-45deg);
-    }
+  &:first-child {
+    left: 5px;
+    top: 15px;
+    height: 15px;
+    width: 40px;
+    transform: rotate(-45deg);
+  }
+  &:nth-child(2) {
+    right: 10px;
+    top: 15px;
+    height: 15px;
+    width: 25px;
+    transform: rotate(45deg);
+  }
+  &:last-child {
+    left: 40px;
+    bottom: 10px;
+    height: 20px;
+    width: 25px;
+    transform: rotate(-45deg);
+  }
 `;
 
 const Shape = styled.div`
@@ -87,55 +87,45 @@ const ToggleContainer = styled.div`
     background-image: linear-gradient(midnightblue, rebeccapurple);
 
     > ${Notch} {
-        background-color: whitesmoke;
-        box-shadow: 0 0 7px whitesmoke;
-        transform: translateX(100px);
+      background-color: whitesmoke;
+      box-shadow: 0 0 7px whitesmoke;
+      transform: translateX(100px);
     }
 
     ${Shape} {
-        box-shadow: 0 0 10px 2px violet;
-        background-color: lightgray;
+      box-shadow: 0 0 10px 2px violet;
+      background-color: lightgray;
     }
 
     ${ShapeSmall} {
-        height: 5px;
-        width: 5px;
-        transform: translate(-40px, 0);
-
+      height: 5px;
+      width: 5px;
+      transform: translate(-40px, 0);
     }
 
     ${ShapeSmall}:first-of-type {
-        transform: translate(-80px, -10px);
-
+      transform: translate(-80px, -10px);
     }
 
     ${ShapeMedium} {
-        height: 10px;
-        width: 10px;
-        transform: translate(10px, 0);
-
+      height: 10px;
+      width: 10px;
+      transform: translate(10px, 0);
     }
 
     ${ShapeLarge} {
-        height: 15px;
-        width: 15px;
-        transform: translate(-10px, 0);
-
+      height: 15px;
+      width: 15px;
+      transform: translate(-10px, 0);
     }
 
     ${Crater} {
-        opacity: 1
-       
-
+      opacity: 1;
     }
   }
 `;
 
-
-
 const ShapesContainer = styled.div``;
-
-
 
 function LightDarkToggle({ toggled, onClick }) {
   return (
