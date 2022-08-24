@@ -5,11 +5,7 @@ function useClickOutside(ref, handler) {
     const handleClickOutside = (e) => {
       // Do nothing if clicking ref's element or descendent elements
 
-      if (
-        !ref?.current?.contains(e.target) &&
-        e.target.className.indexOf('react-switch') === -1 &&
-        handler
-      ) {
+      if (!ref?.current?.contains(e.target) && handler) {
         handler(e);
       }
     };
